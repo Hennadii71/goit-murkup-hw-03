@@ -5,6 +5,7 @@
   --pressed-state: #404bbf;
   --body-txt: #434455;
   --title-txt: #2e2f42;
+  --link-color: #8e8f99;
   --succes-messadges: #31d0aa;
   --primary-txt: Roboto, sans-serif;
 }
@@ -165,6 +166,7 @@ img {
   url(../images/img-homepage/background-photo-hero.jpg) ;
   max-width: 1440px;
   height: 600px;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -312,6 +314,7 @@ img {
 
 .list-our-team{
   display: flex;
+  gap:  24px;
 }
 
 .list-team-item {
@@ -320,15 +323,9 @@ img {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.list-our-team .item:not(:last-child){
-  margin-right: 24px;
-}
-
 .discr-our-team{ 
  padding-top: 32px;
- padding-right: 16px;
  padding-bottom: 32px;
- padding-left: 16px;
 }
 
 .txt-our-team{
@@ -337,11 +334,12 @@ img {
 }
 
 .discr-list{
-display: flex;
+ display: flex;
+ justify-content: center;
+ gap: 24px;
 }
 
 .discr-list .item{
- width: calc((100%-72) / 4);
  width: 40px;
  height: 40px;
  border-radius: 50%;
@@ -361,7 +359,7 @@ display: flex;
 
 .link-social:hover,
 .link-social:focus{
- background-color: var(--succes-messadges);
+ background-color:  #404bbf;
 }
 
 .icon-social{
@@ -381,14 +379,27 @@ display: flex;
   justify-content: center;
   align-items: center;
   flex-basis: calc((100%-120) / 6);
-  border: 1px solid #8E8F99;
-  border-radius: 4px;
 }
 
 .client-linc{
  display: flex;
  justify-content: center;
  align-items: center;
+ width: 100%;
+ height: 100%;
+ border: 1px solid #8E8F99;
+ border-radius: 4px;
+ color: var(--link-color);
+}
+
+.client-linc:hover,
+.client-linc:focus{
+ color: var(--pressed-state);
+ border: 1px solid var(--pressed-state);
+}
+
+.client-icon{
+ fill: currentColor;
 }
 
 /* Footer */
@@ -401,8 +412,11 @@ display: flex;
 
 .foot-container{
  display: flex;
- align-items: start;
+ align-items: baseline;
 }
+
+.logo-foot-blok{
+ margin-right: 120px;}
 
 .logo-foot{
   display: inline-block;
@@ -420,7 +434,6 @@ display: flex;
 }
 
 .foot-txt {
-  margin-right: 120px;
   max-width: 264px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -435,15 +448,12 @@ display: flex;
 
 .list-social-foot{
  display: flex;
+ gap: 16px;
 }
 
 .social-foot-item{
  width: 40px;
  height: 40px;
-}
-
-.social-foot-item:not(:last-child){
- margin-right: 16px;
 }
 
 .social-foot-link{
@@ -548,7 +558,7 @@ display: flex;
 
 
 .link-portfolio{
- display: inline-block;
+ display: block;
 }
 
 .link-portfolio:hover,
